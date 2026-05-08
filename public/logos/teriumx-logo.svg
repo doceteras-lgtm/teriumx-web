@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 180" width="2280" height="540" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+
+  <!-- Orange rounded square -->
+  <rect x="0" y="0" width="180" height="180" rx="26" ry="26" fill="#E8521C"/>
+
+  <!-- Letter "t" -->
+  <rect x="52" y="34" width="24" height="112" rx="6" fill="#1B1B2E"/>
+  <rect x="30" y="60" width="68" height="22" rx="6" fill="#1B1B2E"/>
+
+  <!-- Letter "x" -->
+  <line x1="104" y1="34" x2="172" y2="146" stroke="#1B1B2E" stroke-width="24" stroke-linecap="round"/>
+  <line x1="172" y1="34" x2="104" y2="146" stroke="#1B1B2E" stroke-width="24" stroke-linecap="round"/>
+
+  <!-- Wordmark -->
+  <text x="204" y="136"
+    font-family="'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif"
+    font-size="104" font-weight="600" letter-spacing="-1"
+    fill="#E8521C">teriumx</text>
+
+</svg>
