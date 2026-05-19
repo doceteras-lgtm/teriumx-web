@@ -1,7 +1,12 @@
 /**
  * Contact form de la landing pega a tmed-api (Resend + /contact compartido
- * con teriumed.com y teriumschool.com). VITE_CONTACT_API_URL se setea en
- * Vercel; por defecto local.
+ * con teriumed.com, teriumschool.com y terium-app.com).
+ *
+ * En producción: `VITE_CONTACT_API_URL=https://api.terium-app.com/api/v1`
+ * (Vercel project env). El dominio público vive en la marca paraguas,
+ * NO en teriumed — aunque el repo del backend siga llamándose tmed-api.
+ *
+ * Default local: `http://localhost:3030/api/v1` (tmed-api en dev).
  */
 const CONTACT_API =
   (import.meta.env.VITE_CONTACT_API_URL as string | undefined) ??
