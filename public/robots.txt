@@ -1,0 +1,8 @@
+# TeriumX — robots.txt
+# Permitir indexación completa por todos los bots legítimos.
+
+User-agent: *
+Allow: /
+
+# Sitemap (referenciado para que Google/Bing lo descubran)
+Sitemap: https://www.teriumx.com/sitemap.xml

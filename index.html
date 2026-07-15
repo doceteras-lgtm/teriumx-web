@@ -2,16 +2,37 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      document.documentElement.classList.add('js')
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/logos/teriumx-logo.svg" />
     <meta name="theme-color" content="#1B1B2E" />
+
+    <title>TeriumX · Sistema operativo de ventas</title>
     <meta
       name="description"
       content="TeriumX · Convierte tu operación comercial en un sistema predecible, medible y escalable. Tu equipo no es el problema, tu sistema sí."
     />
+    <link rel="canonical" href="https://www.teriumx.com/" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="TeriumX" />
+    <meta property="og:locale" content="es_MX" />
+    <meta property="og:url" content="https://www.teriumx.com/" />
     <meta property="og:title" content="TeriumX · Sistema operativo de ventas" />
     <meta
       property="og:description"
+      content="Convierte tu operación comercial en un sistema predecible, medible y escalable."
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="TeriumX · Sistema operativo de ventas" />
+    <meta
+      name="twitter:description"
       content="Convierte tu operación comercial en un sistema predecible, medible y escalable."
     />
 
@@ -22,10 +43,27 @@
       rel="stylesheet"
     />
 
-    <title>TeriumX · Sistema operativo de ventas</title>
+    <!-- JSON-LD (Google rich results) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "TeriumX",
+        "url": "https://www.teriumx.com/",
+        "description": "Sistema operativo de ventas para equipos comerciales en México. Estandariza la ejecución, gana visibilidad sobre el funnel y replica lo que funciona.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "inLanguage": "es-MX",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Terium App Studio",
+          "url": "https://teriumstudio.com/"
+        }
+      }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
