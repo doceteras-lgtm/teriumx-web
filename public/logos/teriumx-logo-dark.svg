@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 130" width="2000" height="520" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <!-- TeriumX — logo oficial ESTANDARIZADO (grid + sello), versión para fondos OSCUROS -->
+  <rect x="6" y="16" width="98" height="98" rx="24" fill="none" stroke="#E8521C" stroke-width="6"/>
+  <rect x="36" y="46" width="16" height="16" rx="5" fill="#FFFFFF" opacity="0.9"/>
+  <rect x="58" y="46" width="16" height="16" rx="5" fill="#E8521C"/>
+  <rect x="36" y="68" width="16" height="16" rx="5" fill="#FFFFFF" opacity="0.9"/>
+  <rect x="58" y="68" width="16" height="16" rx="5" fill="#FFFFFF" opacity="0.45"/>
+  <text x="126" y="90" font-family="'Trebuchet MS','Helvetica Neue',Arial,sans-serif" font-size="62" font-weight="600" letter-spacing="-1" fill="#FFFFFF">terium<tspan fill="#E8521C">X</tspan></text>
+</svg>

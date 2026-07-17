@@ -77,7 +77,7 @@ function Header() {
             size="sm"
             className="bg-[hsl(var(--brand-dark))] hover:bg-[hsl(var(--brand-ink))] text-white"
           >
-            Solicitar demo
+            Agenda tu demo
             <ArrowRight className="h-4 w-4" />
           </Button>
         </a>
@@ -87,24 +87,11 @@ function Header() {
 }
 
 function Logo() {
+  // Logo estandarizado de la familia (sello + grid + wordmark teriumX).
   return (
-    <a href="/" className="flex items-center gap-2.5">
-      <BrandMark size={30} />
-      <span className="font-display text-xl font-bold text-[hsl(var(--brand-dark))]">
-        terium<span className="text-[hsl(var(--brand-orange))]">X</span>
-      </span>
+    <a href="/" className="flex items-center">
+      <img src="/logos/teriumx-logo.svg" alt="teriumX" className="h-8 w-auto" />
     </a>
-  )
-}
-
-function BrandMark({ size = 32 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 40 40" aria-label="TeriumX">
-      <rect x="0" y="0" width="18" height="18" rx="5" fill="hsl(var(--brand-dark))" opacity="0.85" />
-      <rect x="22" y="0" width="18" height="18" rx="5" fill="hsl(var(--brand-orange))" />
-      <rect x="0" y="22" width="18" height="18" rx="5" fill="hsl(var(--brand-dark))" opacity="0.85" />
-      <rect x="22" y="22" width="18" height="18" rx="5" fill="hsl(var(--brand-dark))" opacity="0.4" />
-    </svg>
   )
 }
 
@@ -159,7 +146,7 @@ function Hero() {
                 size="lg"
                 className="text-base h-12 px-7 bg-[hsl(var(--brand-orange))] hover:bg-[hsl(var(--brand-orange))]/90 text-white font-semibold shadow-lg shadow-[hsl(var(--brand-orange))]/20"
               >
-                Solicitar demo personalizado
+                Agenda tu demo
                 <ArrowRight className="h-5 w-5" />
               </Button>
             </a>
@@ -631,7 +618,7 @@ function ContactForm() {
         className="w-full h-12 text-base bg-[hsl(var(--brand-orange))] hover:bg-[hsl(var(--brand-orange))]/90 text-white font-semibold shadow-lg shadow-[hsl(var(--brand-orange))]/20"
       >
         {status === 'loading' ? <Loader2 className="h-5 w-5 animate-spin" /> : <Send className="h-5 w-5" />}
-        {status === 'loading' ? 'Enviando...' : 'Solicitar demo'}
+        {status === 'loading' ? 'Enviando...' : 'Agenda tu demo'}
       </Button>
 
       <p className="text-[11px] text-[hsl(var(--brand-dark))]/50 text-center pt-1">
@@ -696,7 +683,7 @@ function Footer() {
               Cómo funciona
             </a>
             <a href="#contacto" className="block text-xs text-foreground hover:text-[hsl(var(--brand-orange))] transition-colors">
-              Solicitar demo
+              Agenda tu demo
             </a>
           </div>
         </div>
