@@ -689,7 +689,10 @@ function Footer() {
         </div>
 
         <div className="border-t mt-10 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-[11px] text-muted-foreground">
-          <div>© {new Date().getFullYear()} TeriumX · Todos los derechos reservados</div>
+          <div>
+            © {new Date().getFullYear()} TeriumX · Todos los derechos reservados{' '}
+            <span className="opacity-50">· v{__APP_VERSION__} · {__APP_COMMIT__} · {__BUILT_AT__}</span>
+          </div>
           <div>Hecho en México</div>
         </div>
       </div>
