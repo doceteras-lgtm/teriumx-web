@@ -89,9 +89,9 @@ function Header() {
 function Logo() {
   return (
     <a href="/" className="flex items-center gap-2.5">
-      <BrandMark size={32} />
-      <span className="font-display text-xl font-bold text-[hsl(var(--brand-orange))]">
-        teriumx
+      <BrandMark size={30} />
+      <span className="font-display text-xl font-bold text-[hsl(var(--brand-dark))]">
+        terium<span className="text-[hsl(var(--brand-orange))]">X</span>
       </span>
     </a>
   )
@@ -99,12 +99,11 @@ function Logo() {
 
 function BrandMark({ size = 32 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 180 180" aria-label="TeriumX">
-      <rect x="0" y="0" width="180" height="180" rx="32" fill="hsl(var(--brand-orange))" />
-      <rect x="52" y="34" width="24" height="112" rx="6" fill="hsl(var(--brand-dark))" />
-      <rect x="30" y="60" width="68" height="22" rx="6" fill="hsl(var(--brand-dark))" />
-      <line x1="104" y1="34" x2="172" y2="146" stroke="hsl(var(--brand-dark))" strokeWidth="24" strokeLinecap="round" />
-      <line x1="172" y1="34" x2="104" y2="146" stroke="hsl(var(--brand-dark))" strokeWidth="24" strokeLinecap="round" />
+    <svg width={size} height={size} viewBox="0 0 40 40" aria-label="TeriumX">
+      <rect x="0" y="0" width="18" height="18" rx="5" fill="hsl(var(--brand-dark))" opacity="0.85" />
+      <rect x="22" y="0" width="18" height="18" rx="5" fill="hsl(var(--brand-orange))" />
+      <rect x="0" y="22" width="18" height="18" rx="5" fill="hsl(var(--brand-dark))" opacity="0.85" />
+      <rect x="22" y="22" width="18" height="18" rx="5" fill="hsl(var(--brand-dark))" opacity="0.4" />
     </svg>
   )
 }
