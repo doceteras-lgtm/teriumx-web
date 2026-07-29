@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="/logos/teriumx-avatar.svg?v=2">
+<meta name="description" content="Recorrido, en lenguaje de negocio, de la plataforma Terium X para call centers: visibilidad en vivo, operación diaria, captación omnicanal y control.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TeriumX">
+<meta property="og:title" content="Terium X · Recorrido de la plataforma para tu call center">
+<meta property="og:description" content="Del lead al cierre — y todo tu call center en una sola pantalla. Visibilidad en vivo, operación diaria, captación omnicanal y control, a la medida de tu operación.">
+<meta property="og:image" content="https://www.teriumx.com/img/teriumx-1.jpg">
+<title>Terium X · Recorrido de la plataforma para tu call center</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --surface:#ffffff; --surface-2:#f0f2f5;
+    --ink:#15181f; --muted:#5c6472; --faint:#8a93a3;
+    --border:#e5e8ee; --border-strong:#d6dae2;
+    --accent:#e8521c; --accent-soft:#fdece4;
+    --navy:#1f2a44; --navy-soft:#eef1f7;
+    --good:#0f9d6b; --shadow:0 1px 2px rgba(20,24,32,.04),0 8px 24px rgba(20,24,32,.06);
+    --maxw:1080px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#0e131d; --surface:#151c29; --surface-2:#1b2434;
+      --ink:#eef1f6; --muted:#9aa6b8; --faint:#6c788c;
+      --border:#243049; --border-strong:#2c3a56;
+      --accent:#ff6a37; --accent-soft:#2a1a12;
+      --navy:#9fb4d8; --navy-soft:#18202f;
+      --good:#34d399; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0e131d; --surface:#151c29; --surface-2:#1b2434;
+    --ink:#eef1f6; --muted:#9aa6b8; --faint:#6c788c;
+    --border:#243049; --border-strong:#2c3a56;
+    --accent:#ff6a37; --accent-soft:#2a1a12;
+    --navy:#9fb4d8; --navy-soft:#18202f;
+    --good:#34d399; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+  }
+  :root[data-theme="light"]{
+    --bg:#f6f7f9; --surface:#ffffff; --surface-2:#f0f2f5;
+    --ink:#15181f; --muted:#5c6472; --faint:#8a93a3;
+    --border:#e5e8ee; --border-strong:#d6dae2;
+    --accent:#e8521c; --accent-soft:#fdece4;
+    --navy:#1f2a44; --navy-soft:#eef1f7;
+    --good:#0f9d6b; --shadow:0 1px 2px rgba(20,24,32,.04),0 8px 24px rgba(20,24,32,.06);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);border-top:3px solid var(--accent);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;-webkit-font-smoothing:antialiased;font-feature-settings:"kern","liga";}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  a{color:inherit}
+
+  .hero{padding:64px 0 40px;border-bottom:1px solid var(--border)}
+  .brand{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .logo{height:38px;width:auto;display:block}
+  .logo-dark{display:none}
+  @media (prefers-color-scheme:dark){
+    .logo-light{display:none}
+    .logo-dark{display:block}
+  }
+  :root[data-theme="dark"] .logo-light{display:none}
+  :root[data-theme="dark"] .logo-dark{display:block}
+  :root[data-theme="light"] .logo-light{display:block}
+  :root[data-theme="light"] .logo-dark{display:none}
+  .brand-tag{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--muted);
+    border-left:1px solid var(--border-strong);padding-left:14px}
+  .logo-sm{height:24px;width:auto;display:block;opacity:.92}
+  h1{font-size:clamp(30px,5vw,46px);line-height:1.08;letter-spacing:-.02em;font-weight:850;
+    margin:22px 0 0;text-wrap:balance;max-width:16ch}
+  h1 em{font-style:normal;color:var(--accent)}
+  .lede{font-size:clamp(16px,2vw,19px);color:var(--muted);margin:18px 0 0;max-width:62ch}
+  .stats{display:flex;flex-wrap:wrap;gap:20px 0;margin-top:34px}
+  .stat{padding:0 20px}
+  .stat:first-child{padding-left:0}
+  .stat:last-child{padding-right:0}
+  @media(min-width:900px){.stat + .stat{border-left:1px solid var(--border)}}
+  @media(max-width:899px){.stat{padding:0 24px 0 0}}
+  .stat .n{font-size:27px;font-weight:850;letter-spacing:-.01em}
+  .stat .l{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:3px}
+  .stat .n .u{color:var(--accent)}
+
+  section{padding:48px 0 8px}
+  .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+  .eyebrow .tag{font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+  .eyebrow .rule{height:1px;flex:1;background:var(--border)}
+  .sec-title{font-size:23px;font-weight:820;letter-spacing:-.01em;margin:4px 0 4px;text-wrap:balance}
+  .sec-sub{color:var(--muted);font-size:15px;margin:0 0 22px;max-width:66ch}
+
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  @media(max-width:720px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;
+    padding:18px 18px 16px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent);opacity:.28;transition:opacity .2s}
+  .card:hover::before{opacity:.9}
+  .card .name{font-weight:800;font-size:16.5px;letter-spacing:-.005em;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .chip{font-size:10.5px;font-weight:700;letter-spacing:.04em;color:var(--muted);
+    border:1px solid var(--border-strong);border-radius:999px;padding:2px 9px;white-space:nowrap}
+  .chip.opt{color:var(--accent);border-color:var(--accent)}
+  .what{color:var(--muted);font-size:14.5px;margin:9px 0 0}
+  .what b{color:var(--ink);font-weight:750}
+  .value{font-size:14px;margin:12px 0 0;padding-top:11px;border-top:1px dashed var(--border-strong);display:flex;gap:8px;align-items:flex-start}
+  .value b{color:var(--ink);font-weight:750}
+  .value .arw{color:var(--accent);font-weight:800;flex:none}
+  .note{font-size:12.5px;color:var(--faint);margin:10px 0 0;display:flex;gap:7px;align-items:flex-start}
+  .note .k{color:var(--navy);font-weight:800;flex:none}
+  .card.wide{grid-column:1 / -1;border-color:var(--border-strong)}
+
+  .closing{margin-top:44px;padding:32px 28px;border-radius:16px;border:1px solid var(--border-strong);
+    border-top:3px solid var(--accent);
+    background:linear-gradient(180deg,var(--navy-soft),var(--surface));box-shadow:var(--shadow)}
+  .closing h3{margin:0;font-size:21px;font-weight:840;letter-spacing:-.01em}
+  .closing p{margin:10px 0 0;color:var(--muted);font-size:15px;max-width:70ch}
+  .closing .pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+  .pill{font-size:12px;font-weight:750;color:var(--ink);background:var(--surface);border:1px solid var(--border-strong);
+    border-radius:999px;padding:6px 13px;display:inline-flex;gap:7px;align-items:center}
+  .pill .d{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+
+  footer{padding:34px 0 60px;color:var(--faint);font-size:13px;border-top:1px solid var(--border);margin-top:40px}
+  footer .foot-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:14px}
+  footer b{color:var(--muted)}
+  .sign{font-weight:700;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="brand">
+      <svg class="logo logo-light" viewBox="0 0 500 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="teriumX">
+      <rect x="6" y="16" width="98" height="98" rx="24" fill="none" stroke="#E8521C" stroke-width="6"/>
+      <rect x="36" y="46" width="16" height="16" rx="5" fill="#1B1B2E" opacity="0.85"/>
+      <rect x="58" y="46" width="16" height="16" rx="5" fill="#E8521C"/>
+      <rect x="36" y="68" width="16" height="16" rx="5" fill="#1B1B2E" opacity="0.85"/>
+      <rect x="58" y="68" width="16" height="16" rx="5" fill="#1B1B2E" opacity="0.4"/>
+      <text x="126" y="90" font-family="'Trebuchet MS','Helvetica Neue',Arial,sans-serif" font-size="62" font-weight="600" letter-spacing="-1" fill="#1B1B2E">terium<tspan fill="#E8521C">X</tspan></text>
+    </svg>
+      <svg class="logo logo-dark" viewBox="0 0 500 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="teriumX">
+      <rect x="6" y="16" width="98" height="98" rx="24" fill="none" stroke="#E8521C" stroke-width="6"/>
+      <rect x="36" y="46" width="16" height="16" rx="5" fill="#FFFFFF" opacity="0.9"/>
+      <rect x="58" y="46" width="16" height="16" rx="5" fill="#E8521C"/>
+      <rect x="36" y="68" width="16" height="16" rx="5" fill="#FFFFFF" opacity="0.9"/>
+      <rect x="58" y="68" width="16" height="16" rx="5" fill="#FFFFFF" opacity="0.45"/>
+      <text x="126" y="90" font-family="'Trebuchet MS','Helvetica Neue',Arial,sans-serif" font-size="62" font-weight="600" letter-spacing="-1" fill="#FFFFFF">terium<tspan fill="#E8521C">X</tspan></text>
+    </svg>
+      <span class="brand-tag">Plataforma de operación</span>
+    </div>
+    <h1>Del <em>lead</em> al cierre — y todo tu call center en <em>una sola pantalla</em>.</h1>
+    <p class="lede">Un recorrido, en lenguaje de negocio, por lo que viste en la demo. Cada pantalla responde
+      una pregunta que ya te haces todos los días: cómo va el número, quién jala, dónde se atora el dinero y
+      qué hago hoy. Y nada es "de molde": todo se construye a la medida de tu operación — una plataforma
+      segura que crece contigo, de una oficina a todo el grupo.</p>
+    <div class="stats">
+      <div class="stat"><div class="n">4<span class="u"> verticales</span></div><div class="l">Telemarketing · Ventas · Compliance · Trading</div></div>
+      <div class="stat"><div class="n">1<span class="u"> verdad</span></div><div class="l">Los mismos números para todos, en vivo</div></div>
+      <div class="stat"><div class="n">A tu<span class="u"> medida</span></div><div class="l">Tus verticales, tus reglas, tu marca</div></div>
+    </div>
+  </header>
+
+  <!-- 1. VISIBILIDAD -->
+  <section>
+    <div class="eyebrow"><span class="tag">Visibilidad</span><span class="rule"></span></div>
+    <h2 class="sec-title">Cómo va el negocio, de un vistazo</h2>
+    <p class="sec-sub">Tu tablero de dirección. Empiezas viendo todo el grupo y bajas hasta un solo agente sin
+      cambiar de herramienta ni pedirle un reporte a nadie.</p>
+    <div class="grid">
+
+      <div class="card">
+        <div class="name">Dashboard Holding <span class="chip">Dirección</span></div>
+        <p class="what">La foto completa del grupo: todas tus oficinas y verticales juntas — venta del periodo,
+          avance contra la meta y comparativo contra el periodo anterior.</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> en 10 segundos sabes si el mes va bien o mal, sin esperar el reporte del lunes.</span></p>
+      </div>
+
+      <div class="card">
+        <div class="name">Dashboard por Departamento <span class="chip">Áreas</span></div>
+        <p class="what">El desempeño de cada área (Telemarketing, Ventas, Compliance, Trading) con su embudo:
+          cuántos prospectos entran y en qué etapa se caen.</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> ves de inmediato qué área jala y cuál se está atorando.</span></p>
+      </div>
+
+      <div class="card">
+        <div class="name">Dashboard de Oficina <span class="chip">Piso / Campaña</span></div>
+        <p class="what">El pulso de una oficina o campaña: contactos del día, prospectos trabajados y la venta
+          acumulada contra la meta diaria.</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> el termómetro diario del piso, el mismo que ve tu gerente.</span></p>
+      </div>
+
+      <div class="card">
+        <div class="name">Dashboard de Equipo <span class="chip">Líderes</span></div>
+        <p class="what">Cómo va un equipo y su líder: meta del equipo, avance y la curva del mes día por día.</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> comparas equipos objetivamente y detectas a los líderes fuertes… y a los que necesitan apoyo.</span></p>
+      </div>
+
+      <div class="card">
+        <div class="name">Performance de Usuario <span class="chip">Cada agente</span></div>
+        <p class="what">La tarjeta de desempeño de un agente: meta personal, % de avance, contactos de hoy,
+          prospectos, ventas ganadas, seguimientos agendados y su venta acumulada del mes.</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> evaluación justa y con números — no "a ojo" — de cada persona en tu piso.</span></p>
+      </div>
+
+      <div class="card">
+        <div class="name">Performance por Vertical <span class="chip">TMk · Ventas · Compliance · Trading</span></div>
+        <p class="what">La misma lente de desempeño, pero hablando el idioma de cada línea de negocio
+          (expedientes en Compliance, cargas en Trading…) e incluyendo las <b>causas de rechazo / pérdida</b>.</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> cada línea de negocio medida con sus propias reglas, y el porqué de lo que no cierra.</span></p>
+      </div>
+
+      <div class="card">
+        <div class="name">Pipeline de Ventas <span class="chip">Oportunidades</span></div>
+        <p class="what">El tablero de oportunidades por etapa: dónde está parado cada negocio dentro del proceso.</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> cuánto dinero tienes "sobre la mesa" hoy y en qué etapa se está frenando.</span></p>
+      </div>
+
+      <div class="card">
+        <div class="name">Funnel (Embudo) <span class="chip">Conversión</span></div>
+        <p class="what">El embudo agregado: de cada 100 prospectos, cuántos contestan, se interesan, se asignan
+          y cierran.</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> la eficiencia real de tu negocio en una sola imagen — dónde se te cae la gente.</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 2. OPERACIÓN -->
+  <section>
+    <div class="eyebrow"><span class="tag">Operación diaria</span><span class="rule"></span></div>
+    <h2 class="sec-title">El día a día del piso</h2>
+    <p class="sec-sub">Donde trabaja tu agente. El objetivo es simple: que ningún prospecto se quede sin llamar y
+      que ningún seguimiento se caiga.</p>
+    <div class="grid">
+
+      <div class="card wide">
+        <div class="name">Importador inteligente de CSV <span class="chip">Mapeo · De-dup · Reglas</span></div>
+        <p class="what">Subes la base de una campaña y la plataforma hace el trabajo sucio: <b>mapeo semiautomático
+          de columnas por archivo</b> (aprende el formato de cada fuente), <b>de-duplicación</b> contra tu base
+          viva y <b>reglas de asignación</b> que reparten cada lead al agente o equipo correcto — todo en un paso.</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> un CSV crudo y desordenado se vuelve leads listos para llamar en minutos — sin capturistas, sin duplicados quemando minutos de tu gente, sin leads mal repartidos.</span></p>
+      </div>
+
+      <div class="card">
+        <div class="name">Mis Leads <span class="chip">Bandeja del agente</span></div>
+        <p class="what">La lista de prospectos asignados a cada agente, con su estatus y la siguiente acción:
+          el "¿a quién le hablo ahora?".</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> tu piso siempre sabe qué hacer; nadie se queda esperando instrucciones.</span></p>
+      </div>
+
+      <div class="card">
+        <div class="name">Asignar Leads <span class="chip">Reparto</span></div>
+        <p class="what">Repartir o rebalancear prospectos entre agentes y equipos con reglas claras.</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> reparto justo y sin favoritismos — cada base se trabaja completa.</span></p>
+      </div>
+
+      <div class="card wide">
+        <div class="name">Click to Call <span class="chip">BYOC · VoIP / SIP</span></div>
+        <p class="what">Integramos <b>tu propio proveedor de VoIP</b>: el agente marca con un clic y cada llamada
+          saliente se enruta por el carrier, la troncal y el país correctos según el origen del lead — sobre tu
+          propia infraestructura de voz (<b>BYOC · Bring Your Own Carrier</b>, SIP Trunk).</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> no te casas con un solo proveedor — usas tus propias troncales, marcas con número local del país del lead (más contacto efectivo) y controlas el costo por minuto.</span></p>
+      </div>
+
+      <div class="card">
+        <div class="name">Agenda <span class="chip">Seguimientos</span></div>
+        <p class="what">Las citas y seguimientos programados de cada agente, en un solo calendario.</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> protege los follow-ups — donde se pierde la mayoría de las ventas por olvido.</span></p>
+      </div>
+
+      <div class="card">
+        <div class="name">Metas <span class="chip">Objetivos</span></div>
+        <p class="what">Fija las metas por persona, equipo, oficina y grupo — la base contra la que todo se mide.</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> bajas el número del año a objetivos concretos que cada quien ve todos los días.</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. CAPTACIÓN -->
+  <section>
+    <div class="eyebrow"><span class="tag">Captación &amp; cliente</span><span class="rule"></span></div>
+    <h2 class="sec-title">Habla con tu cliente por su canal — y de forma medible</h2>
+    <p class="sec-sub">La conversación con el cliente vive dentro de la plataforma, ordenada y medible, con tus
+      propias cuentas y tu propio dominio.</p>
+    <div class="grid">
+
+      <div class="card">
+        <div class="name">WhatsApp <span class="chip">Canal #1 del cliente</span></div>
+        <p class="what">Las conversaciones de WhatsApp con tus clientes, centralizadas dentro del CRM.</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> el canal que más usa tu cliente, ordenado, medible y no en el celular personal del agente.</span></p>
+        <p class="note"><span class="k">Insumo:</span><span>tu cuenta de Facebook Business verificada (WhatsApp Business API).</span></p>
+      </div>
+
+      <div class="card">
+        <div class="name">Correos <span class="chip">Email</span></div>
+        <p class="what">Comunicación por correo con tus prospectos desde la misma plataforma.</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> toda la comunicación con el cliente en un solo lugar y con historial.</span></p>
+        <p class="note"><span class="k">Insumo:</span><span>usamos tu propio dominio a través de plataforma de email masivo — llegas a la bandeja, con tu marca.</span></p>
+      </div>
+
+      <div class="card wide">
+        <div class="name">Integración con Meta (Facebook / Instagram) <span class="chip opt">Opcional</span></div>
+        <p class="what">Si trabajas leads de Meta, los prospectos de tus campañas de Facebook e Instagram entran
+          solos al sistema, listos para asignar, sin captura manual.</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> cuando corres campañas en Meta, el prospecto que levantó la mano llega al agente en segundos — no al día siguiente, ya frío.</span></p>
+        <p class="note"><span class="k">Opcional:</span><span>se activa solo si captas leads por Meta; si no, no estorba.</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. GOBIERNO -->
+  <section>
+    <div class="eyebrow"><span class="tag">Control &amp; estructura</span><span class="rule"></span></div>
+    <h2 class="sec-title">Quién ve qué, y cómo se organiza todo</h2>
+    <p class="sec-sub">El andamiaje que mantiene tu operación segura, ordenada y adaptada a tu forma de trabajar.</p>
+    <div class="grid">
+
+      <div class="card">
+        <div class="name">Usuarios &amp; Equipos <span class="chip">Estructura</span></div>
+        <p class="what">Alta, baja y organización de agentes, líderes y equipos tal como está armado tu call center.</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> el organigrama real de tu operación, reflejado en el sistema.</span></p>
+      </div>
+
+      <div class="card">
+        <div class="name">Roles &amp; Permisos <span class="chip">Seguridad</span></div>
+        <p class="what">Defines quién puede ver y hacer qué. Cada quien ve solo lo que le corresponde.</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> control y confidencialidad — un agente no ve los números de todo el grupo.</span></p>
+      </div>
+
+      <div class="card">
+        <div class="name">Configuración de Pipelines <span class="chip">A tu medida</span></div>
+        <p class="what">Ajustas las etapas del proceso de venta al negocio real de cada vertical.</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> el sistema se adapta a tu forma de vender, no al revés.</span></p>
+      </div>
+
+      <div class="card">
+        <div class="name">Soporte &amp; Centro de ayuda <span class="chip">Continuidad</span></div>
+        <p class="what">Mesa de ayuda interna (tickets) para que tu piso reporte y se resuelva, más el manual de uso
+          para tus usuarios.</p>
+        <p class="value"><span class="arw">→</span><span><b>Traducido a tu negocio:</b> tu operación no se detiene cuando algo falla o entra gente nueva.</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CIERRE -->
+  <div class="closing">
+    <h3>Construido a tu medida — y hecho para crecer contigo.</h3>
+    <p>Todo lo que viste se configura como tu negocio lo necesita: tus verticales, tus reglas, tu marca, tus
+      proveedores. Una plataforma segura que escala de una oficina a todo el grupo sin cambiar de herramienta —
+      y que suma módulos a medida que tu operación crece.</p>
+    <div class="pills">
+      <span class="pill"><span class="d"></span>A tu medida</span>
+      <span class="pill"><span class="d"></span>Segura y con roles</span>
+      <span class="pill"><span class="d"></span>Crece con tu negocio</span>
+      <span class="pill"><span class="d"></span>Tus proveedores (BYOC)</span>
+      <span class="pill"><span class="d"></span>Una sola verdad, en vivo</span>
+    </div>
+  </div>
+
+  <footer>
+    <p>Recorrido de capacidades preparado a partir de la demo. Lenguaje de negocio; nombres de pantalla tal
+      como aparecen en la plataforma. Los datos mostrados en la demostración son de ejemplo.</p>
+    <div class="foot-row">
+      <p class="sign" style="margin:0">Preparado por el equipo de Terium X</p>
+      <svg class="logo-sm logo-light" viewBox="0 0 500 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="teriumX">
+      <rect x="6" y="16" width="98" height="98" rx="24" fill="none" stroke="#E8521C" stroke-width="6"/>
+      <rect x="36" y="46" width="16" height="16" rx="5" fill="#1B1B2E" opacity="0.85"/>
+      <rect x="58" y="46" width="16" height="16" rx="5" fill="#E8521C"/>
+      <rect x="36" y="68" width="16" height="16" rx="5" fill="#1B1B2E" opacity="0.85"/>
+      <rect x="58" y="68" width="16" height="16" rx="5" fill="#1B1B2E" opacity="0.4"/>
+      <text x="126" y="90" font-family="'Trebuchet MS','Helvetica Neue',Arial,sans-serif" font-size="62" font-weight="600" letter-spacing="-1" fill="#1B1B2E">terium<tspan fill="#E8521C">X</tspan></text>
+    </svg>
+      <svg class="logo-sm logo-dark" viewBox="0 0 500 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="teriumX">
+      <rect x="6" y="16" width="98" height="98" rx="24" fill="none" stroke="#E8521C" stroke-width="6"/>
+      <rect x="36" y="46" width="16" height="16" rx="5" fill="#FFFFFF" opacity="0.9"/>
+      <rect x="58" y="46" width="16" height="16" rx="5" fill="#E8521C"/>
+      <rect x="36" y="68" width="16" height="16" rx="5" fill="#FFFFFF" opacity="0.9"/>
+      <rect x="58" y="68" width="16" height="16" rx="5" fill="#FFFFFF" opacity="0.45"/>
+      <text x="126" y="90" font-family="'Trebuchet MS','Helvetica Neue',Arial,sans-serif" font-size="62" font-weight="600" letter-spacing="-1" fill="#FFFFFF">terium<tspan fill="#E8521C">X</tspan></text>
+    </svg>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
